@@ -1,6 +1,6 @@
 # taskap
 
-Lista de coisas para comprar durante o mes
+Lista de coisas para concluir
 
 ## Getting Started
 
