@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var _objetivos = [];
+  var _objetivos = List<dynamic>();
   var _ultimoRemovido = Map();
   var _ultimoRemovidoIndex;
 
@@ -22,7 +22,9 @@ class _HomeState extends State<Home> {
     super.initState();
     _readData().then((data) {
       setState(() {
-        _objetivos = data;
+        if (data.runtimeType == List<dynamic>()) {
+          _objetivos = data;
+        }
       });
     });
   }
